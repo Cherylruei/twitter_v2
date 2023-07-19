@@ -6,8 +6,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
 }
@@ -29,7 +27,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: inherit;
 }
 html {
-  text-size-adjust: 100%;
   box-sizing: border-box;
 }
 body {
@@ -69,17 +66,51 @@ a {
 }
 button {
   padding: 0;
-  border: none;
-  background: none;
 }
 `;
 
 // CSS globalStyle setting
 
 export const GlobalStyle = createGlobalStyle`
+
 html {
+  margin: 0;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
-  font-size: 62.5%; 
-  font-family: 'HelveticaNeue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: 'Montserrat','Noto Sans TC', sans-serif;
 }
+
+
+
+
+@media (max-width: 1199px) {
+ 
+   
+}
+
+@media (max-width: 991px) {
+ 
+}
+
+// CSS common variables
+:root {
+  // font-size
+  --font-size-h3: 1.75rem;
+  // colors
+  --color-primary:#0062FF;
+  --color-theme: #FF6600;
+  --color-white: #FFFFFF;
+  --color-form: #F5F8FA;
+  --color-success: #82C43C;
+  --color-danger: #FC5A5A;
+  --color-warning: #FFC542;
+  --color-secondary-blue: #50b5ff;
+  --color-gray-60: #B5B5BE;
+  --color-gray-80: #696974;
+  
+}
+
 `;

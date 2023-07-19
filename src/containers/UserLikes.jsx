@@ -1,9 +1,7 @@
 // UsersPage
 
 const UserLikes = () => {
-  return (
-    <div>UserLikes</div>
-  )
-}
+  return <div>UserLikes</div>;
+};
 
-export default UserLikes
+export default UserLikes;

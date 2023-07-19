@@ -6,10 +6,18 @@ import {
   LoginPage,
   RegisterPage,
   ReplyPage,
-  FollowPage,
   UsersPage,
 } from './pages';
 import TweetLayout from './layout/TweetLayout';
+import AdminPage from './pages/AdminPage';
+import AdminLayout from './layout/AdminLayout';
+import AdminTweets from './containers/AdminTweets';
+import AdminUsers from './containers/AdminUsers';
+import UserTweets from './containers/UserTweets';
+import UserLikes from './containers/UserLikes';
+import UserReplies from './containers/UserReplies';
+import UserFollowers from './containers/UserFollowers';
+import UserFollowings from './containers/UserFollowings';
 
 function App() {
   return (
@@ -29,12 +37,21 @@ function App() {
           </Route>
           <Route element={<UsersPage />}>
             <Route path='/users/:userId'>
-              <Route path='tweets' />
-              <Route path=':userId' element={<FollowPage />} />
+              <Route path='tweets' element={<UserTweets />} />
+              <Route path='likes' element={<UserLikes />} />
+              <Route path='replies' element={<UserReplies />} />
+              <Route path='followers' element={<UserFollowers />} />
+              <Route path='followings' element={<UserFollowings />} />
             </Route>
           </Route>
         </Route>
-        <Route></Route>
+        <Route>
+          <Route path='admin' element={<AdminPage />} />
+          <Route element={<AdminLayout />}>
+            <Route path='tweets' element={<AdminTweets />} />
+            <Route path='users' element={<AdminUsers />} />
+          </Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

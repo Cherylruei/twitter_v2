@@ -1,9 +1,7 @@
 // UsersPage
 
 const UserReplies = () => {
-  return (
-    <div>UserReplies</div>
-  )
-}
+  return <div>UserReplies</div>;
+};
 
-export default UserReplies
+export default UserReplies;
