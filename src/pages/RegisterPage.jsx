@@ -5,6 +5,11 @@ import { LoginContainer } from '../components/common/ContainerStyle';
 import logo from './../assets/logos/logo.svg';
 
 const RegisterPage = () => {
+  const btnStyles = {
+    width: '22.25rem',
+    height: '2.875rem',
+    fontSize: '1.25rem',
+  };
   return (
     <LoginContainer>
       <img src={logo} alt='logo' />
@@ -14,7 +19,7 @@ const RegisterPage = () => {
       <AuthInput label='Email' placeholder='請輸入Email' />
       <AuthInput label='密碼' placeholder='請輸入密碼' />
       <AuthInput label='密碼確認' placeholder='請再次輸入密碼' />
-      <Button text='註冊' />
+      <Button styles={btnStyles} btnText='註冊' />
       <div className='linkRegDiv'>
         <Link to='/login' className='link'>
           取消
