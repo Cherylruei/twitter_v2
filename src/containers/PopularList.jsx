@@ -1,5 +1,5 @@
 const PopularList = () => {
-  return <div>PopularList</div>;
+  return <div className='list'>PopularList</div>;
 };
 
 export default PopularList;

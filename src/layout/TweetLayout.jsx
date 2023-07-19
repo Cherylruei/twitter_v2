@@ -7,7 +7,9 @@ const TweetLayout = () => {
   return (
     <TweetContainer>
       <Sidebar />
-      <Outlet />
+      <div className='main'>
+        <Outlet />
+      </div>
       <PopularList />
     </TweetContainer>
   );

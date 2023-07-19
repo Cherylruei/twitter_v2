@@ -67,6 +67,9 @@ a {
 button {
   padding: 0;
 }
+a:-webkit-any-link  {
+  color: inherit;
+}
 `;
 
 // CSS globalStyle setting
@@ -75,15 +78,21 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   margin: 0;
-  display: flex;
+  max-width: 1280px;
   font-size: 16px;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
   font-family: 'Montserrat','Noto Sans TC', sans-serif;
 }
 
-
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
 
 
 @media (max-width: 1199px) {
@@ -98,7 +107,11 @@ html {
 // CSS common variables
 :root {
   // font-size
+  --font-size-h1: 4.25rem;
+  --font-size-h2: 2.6255rem;
   --font-size-h3: 1.75rem;
+  --font-size-h4: 1.5rem;
+  --font-size-h5: 1.125rem;
   // colors
   --color-primary:#0062FF;
   --color-theme: #FF6600;
@@ -110,6 +123,7 @@ html {
   --color-secondary-blue: #50b5ff;
   --color-gray-60: #B5B5BE;
   --color-gray-80: #696974;
+  --color-gray-90: #44444F;
   
 }
 

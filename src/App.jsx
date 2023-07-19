@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import './App.css';
 import { ResetStyle, GlobalStyle } from './components/common/globalStyle';
 import {
   HomePage,
@@ -7,9 +6,10 @@ import {
   RegisterPage,
   ReplyPage,
   UsersPage,
+  Setting,
+  AdminPage,
 } from './pages';
 import TweetLayout from './layout/TweetLayout';
-import AdminPage from './pages/AdminPage';
 import AdminLayout from './layout/AdminLayout';
 import AdminTweets from './containers/AdminTweets';
 import AdminUsers from './containers/AdminUsers';
@@ -44,7 +44,9 @@ function App() {
               <Route path='followings' element={<UserFollowings />} />
             </Route>
           </Route>
+          <Route path='setting' element={<Setting />} />
         </Route>
+
         <Route>
           <Route path='admin' element={<AdminPage />} />
           <Route element={<AdminLayout />}>
