@@ -1,0 +1,11 @@
+// 不需要 jsconfig.json 檔案也可以引入
+// Without setting it up, if you would try to import a component like import CMP from “@/component/…path”, there would be no intellisense for it. (?)
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

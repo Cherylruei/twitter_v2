@@ -12,4 +12,9 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
   },
-}
+  //
+  globals: {
+    process: 'readonly',
+    __dirname: 'readonly',
+  },
+};
